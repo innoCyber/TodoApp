@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.altstoriesadminapp.todoapp.ui.data.converters.PriorityConverter
 import com.altstoriesadminapp.todoapp.ui.data.dao.ToDoDao
 import com.altstoriesadminapp.todoapp.ui.data.entities.ToDoData
 
 @Database(entities = [ToDoData::class], version = 1, exportSchema = false)
+@TypeConverters(PriorityConverter::class)
 abstract class ToDoDatabase: RoomDatabase() {
 
     abstract fun toDoDao(): ToDoDao
