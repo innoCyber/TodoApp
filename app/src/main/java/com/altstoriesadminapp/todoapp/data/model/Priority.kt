@@ -1,4 +1,4 @@
-package com.altstoriesadminapp.todoapp.ui.data
+package com.altstoriesadminapp.todoapp.data.model
 
 enum class Priority {
     HIGH,

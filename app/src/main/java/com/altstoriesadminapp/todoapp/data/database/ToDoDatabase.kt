@@ -1,13 +1,13 @@
-package com.altstoriesadminapp.todoapp.ui.data.database
+package com.altstoriesadminapp.todoapp.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.altstoriesadminapp.todoapp.ui.data.converters.PriorityConverter
-import com.altstoriesadminapp.todoapp.ui.data.dao.ToDoDao
-import com.altstoriesadminapp.todoapp.ui.data.entities.ToDoData
+import com.altstoriesadminapp.todoapp.data.converters.PriorityConverter
+import com.altstoriesadminapp.todoapp.data.dao.ToDoDao
+import com.altstoriesadminapp.todoapp.data.entities.ToDoData
 
 @Database(entities = [ToDoData::class], version = 1, exportSchema = false)
 @TypeConverters(PriorityConverter::class)

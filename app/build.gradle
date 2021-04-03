@@ -79,4 +79,7 @@ dependencies {
 
     // RecyclerView Animator
     implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
+
+    //viewbinding
+    implementation 'com.github.yogacp:android-viewbinding:1.0.2'
 }

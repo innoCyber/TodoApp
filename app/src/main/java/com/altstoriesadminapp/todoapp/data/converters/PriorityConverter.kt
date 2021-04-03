@@ -1,7 +1,7 @@
-package com.altstoriesadminapp.todoapp.ui.data.converters
+package com.altstoriesadminapp.todoapp.data.converters
 
 import androidx.room.TypeConverter
-import com.altstoriesadminapp.todoapp.ui.data.Priority
+import com.altstoriesadminapp.todoapp.data.model.Priority
 
 class PriorityConverter {
 
@@ -10,7 +10,7 @@ class PriorityConverter {
         return priority.name
     }
     @TypeConverter
-    fun fromString(priority: String): Priority{
+    fun fromString(priority: String): Priority {
         return Priority.valueOf(priority)
     }
 }
