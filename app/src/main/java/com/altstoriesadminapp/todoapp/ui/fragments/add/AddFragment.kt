@@ -26,6 +26,8 @@ class AddFragment : Fragment(R.layout.fragment_add) {
 
         setHasOptionsMenu(true)
 
+        binding.priotitySpinner.onItemSelectedListener =sharedViewModel.listener
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
