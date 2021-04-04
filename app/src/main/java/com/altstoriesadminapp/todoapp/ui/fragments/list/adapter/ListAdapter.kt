@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.altstoriesadminapp.todoapp.R
 import com.altstoriesadminapp.todoapp.data.entities.ToDoData
+import com.altstoriesadminapp.todoapp.ui.fragments.list.ListFragmentDirections
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
@@ -18,7 +19,8 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.tit
+        // holder.itemView.tit
+        val action = ListFragmentDirections.actionListFragmentToUpdateFragment(toDoDataItems[position])
     }
 
     override fun getItemCount(): Int {
