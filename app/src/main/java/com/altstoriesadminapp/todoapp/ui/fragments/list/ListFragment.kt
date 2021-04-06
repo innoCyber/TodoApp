@@ -3,30 +3,28 @@ package com.altstoriesadminapp.todoapp.ui.fragments.list
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
 import com.altstoriesadminapp.todoapp.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.altstoriesadminapp.todoapp.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
 
+    private var _binding: FragmentListBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_list, container, false)
-        view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
-            findNavController().navigate(R.id.action_listFragment_to_addFragment)
-        }
+        _binding = FragmentListBinding.inflate(inflater, container, false)
 
-        view.findViewById<ConstraintLayout>(R.id.listLayout).setOnClickListener {
+        binding.listLayout.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_updateFragment)
         }
 
         setHasOptionsMenu(true)
 
-        return view
+        return binding.root
 
     }
 

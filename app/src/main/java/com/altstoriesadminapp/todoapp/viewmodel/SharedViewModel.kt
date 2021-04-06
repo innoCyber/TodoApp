@@ -36,12 +36,22 @@ class SharedViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun parsePriority(priority: String): Priority {
-        return when(priority){
+        return when (priority) {
             "High Priority" -> Priority.HIGH
             "Medium Priority" -> Priority.MEDIUM
             "Low Priority" -> Priority.LOW
             else -> Priority.LOW
         }
+    }
+
+
+    fun parsePriorityToInt(priority: Priority): Int {
+        return when (priority) {
+            Priority.LOW -> 2
+            Priority.MEDIUM -> 1
+            Priority.HIGH -> 0
+        }
+
     }
 
 }
